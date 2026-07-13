@@ -20,7 +20,7 @@ An interactive Streamlit application for experimenting with Large Language Model
 - python-dotenv
 
 ## 🚀 Run Locally
-
+- Add you GROQ API KEY to .env file
 ```bash
 pip install -r requirements.txt
 streamlit run app.py
