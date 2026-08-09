@@ -25,11 +25,15 @@ if "messages" not in st.session_state:
     st.session_state.messages = []
 
 # sliders
-temperature = st.slider(
-    "Temperature", min_value=0.0, max_value=2.0, value=1.0, step=0.1
-)
-max_tokens = st.slider("Max Tokens", min_value=200, max_value=2000, value=500, step=100)
-top_p = st.slider("Top p Threshold", min_value=0.0, max_value=1.0, value=0.5, step=0.1)
+col1, col2, col3 = st.columns(3)
+with col1:
+    temperature = st.slider(
+        "Temperature", min_value=0.0, max_value=2.0, value=1.0, step=0.1
+    )
+with col2:
+    max_tokens = st.slider("Max Tokens", min_value=200, max_value=2000, value=500, step=100)
+with col3:
+    top_p = st.slider("Top p Threshold", min_value=0.0, max_value=1.0, value=0.5, step=0.1)
 
 # model selection
 model = st.selectbox(
